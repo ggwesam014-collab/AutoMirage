@@ -39,9 +39,9 @@ ui_Title_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 ui_Title_3.BackgroundTransparency = 1
 ui_Title_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
 ui_Title_3.BorderSizePixel = 0
-ui_Title_3.Position = UDim2.new(0, 0, 0, 0)
+ui_Title_3.Position = UDim2.new(0.056551, 0, 0.0964076, 0)
 ui_Title_3.Rotation = 0
-ui_Title_3.Size = UDim2.new(1, 0, 0.26875, 0)
+ui_Title_3.Size = UDim2.new(0.879132, 0, 0.204454, 0)
 ui_Title_3.SizeConstraint = Enum.SizeConstraint.RelativeXY
 ui_Title_3.Visible = true
 ui_Title_3.ZIndex = 1
@@ -50,7 +50,7 @@ ui_Title_3.LayoutOrder = 0
 ui_Title_3.Text = "Auto Mirage"
 ui_Title_3.TextColor3 = Color3.fromRGB(0, 85, 127)
 ui_Title_3.TextSize = 25
-ui_Title_3.TextScaled = false
+ui_Title_3.TextScaled = true
 ui_Title_3.TextWrapped = true
 ui_Title_3.TextXAlignment = Enum.TextXAlignment.Center
 ui_Title_3.TextYAlignment = Enum.TextYAlignment.Center
@@ -59,141 +59,113 @@ ui_Title_3.FontFace = Font.new("rbxassetid://12187370000", Enum.FontWeight.Bold,
 ui_Title_3.TextTransparency = 0
 ui_Title_3.Parent = ui_MainFrame_2
 
--- إنشاء: MirageStuts (TextLabel)
-local ui_MirageStuts_4 = Instance.new("TextLabel")
-ui_MirageStuts_4.Name = "MirageStuts"
-ui_MirageStuts_4.AnchorPoint = Vector2.new(0, 0)
-ui_MirageStuts_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-ui_MirageStuts_4.BackgroundTransparency = 1
-ui_MirageStuts_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
-ui_MirageStuts_4.BorderSizePixel = 0
-ui_MirageStuts_4.Position = UDim2.new(0.0296296, 0, 0.175, 0)
-ui_MirageStuts_4.Rotation = 0
-ui_MirageStuts_4.Size = UDim2.new(0.97037, 0, 0.15625, 0)
-ui_MirageStuts_4.SizeConstraint = Enum.SizeConstraint.RelativeXY
-ui_MirageStuts_4.Visible = true
-ui_MirageStuts_4.ZIndex = 1
-ui_MirageStuts_4.ClipsDescendants = false
-ui_MirageStuts_4.LayoutOrder = 0
-ui_MirageStuts_4.Text = "Mirage Island:"
-ui_MirageStuts_4.TextColor3 = Color3.fromRGB(0, 85, 127)
-ui_MirageStuts_4.TextSize = 18
-ui_MirageStuts_4.TextScaled = false
-ui_MirageStuts_4.TextWrapped = true
-ui_MirageStuts_4.TextXAlignment = Enum.TextXAlignment.Left
-ui_MirageStuts_4.TextYAlignment = Enum.TextYAlignment.Center
-ui_MirageStuts_4.RichText = false
-ui_MirageStuts_4.FontFace = Font.new("rbxassetid://12187370000", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
-ui_MirageStuts_4.TextTransparency = 0
-ui_MirageStuts_4.Parent = ui_MainFrame_2
-
 -- إنشاء: StartBtn (TextButton)
-local ui_StartBtn_5 = Instance.new("TextButton")
-ui_StartBtn_5.Name = "StartBtn"
-ui_StartBtn_5.AnchorPoint = Vector2.new(0, 0)
-ui_StartBtn_5.BackgroundColor3 = Color3.fromRGB(0, 51, 74)
-ui_StartBtn_5.BackgroundTransparency = 0
-ui_StartBtn_5.BorderColor3 = Color3.fromRGB(0, 0, 0)
-ui_StartBtn_5.BorderSizePixel = 0
-ui_StartBtn_5.Position = UDim2.new(0.0296296, 0, 0.3875, 0)
-ui_StartBtn_5.Rotation = 0
-ui_StartBtn_5.Size = UDim2.new(0.940741, 0, 0.3125, 0)
-ui_StartBtn_5.SizeConstraint = Enum.SizeConstraint.RelativeXY
-ui_StartBtn_5.Visible = true
-ui_StartBtn_5.ZIndex = 1
-ui_StartBtn_5.ClipsDescendants = false
-ui_StartBtn_5.LayoutOrder = 0
-ui_StartBtn_5.Text = "Start Find"
-ui_StartBtn_5.TextColor3 = Color3.fromRGB(0, 85, 127)
-ui_StartBtn_5.TextSize = 25
-ui_StartBtn_5.TextScaled = false
-ui_StartBtn_5.TextWrapped = false
-ui_StartBtn_5.TextXAlignment = Enum.TextXAlignment.Center
-ui_StartBtn_5.TextYAlignment = Enum.TextYAlignment.Center
-ui_StartBtn_5.RichText = false
-ui_StartBtn_5.FontFace = Font.new("rbxassetid://12187370000", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
-ui_StartBtn_5.TextTransparency = 0
-ui_StartBtn_5.AutoButtonColor = true
-ui_StartBtn_5.Parent = ui_MainFrame_2
+local ui_StartBtn_4 = Instance.new("TextButton")
+ui_StartBtn_4.Name = "StartBtn"
+ui_StartBtn_4.AnchorPoint = Vector2.new(0, 0)
+ui_StartBtn_4.BackgroundColor3 = Color3.fromRGB(0, 51, 74)
+ui_StartBtn_4.BackgroundTransparency = 0
+ui_StartBtn_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ui_StartBtn_4.BorderSizePixel = 0
+ui_StartBtn_4.Position = UDim2.new(0.0296296, 0, 0.3875, 0)
+ui_StartBtn_4.Rotation = 0
+ui_StartBtn_4.Size = UDim2.new(0.940741, 0, 0.3125, 0)
+ui_StartBtn_4.SizeConstraint = Enum.SizeConstraint.RelativeXY
+ui_StartBtn_4.Visible = true
+ui_StartBtn_4.ZIndex = 1
+ui_StartBtn_4.ClipsDescendants = false
+ui_StartBtn_4.LayoutOrder = 0
+ui_StartBtn_4.Text = "Start Find"
+ui_StartBtn_4.TextColor3 = Color3.fromRGB(0, 85, 127)
+ui_StartBtn_4.TextSize = 20
+ui_StartBtn_4.TextScaled = false
+ui_StartBtn_4.TextWrapped = true
+ui_StartBtn_4.TextXAlignment = Enum.TextXAlignment.Center
+ui_StartBtn_4.TextYAlignment = Enum.TextYAlignment.Center
+ui_StartBtn_4.RichText = false
+ui_StartBtn_4.FontFace = Font.new("rbxassetid://12187370000", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
+ui_StartBtn_4.TextTransparency = 0
+ui_StartBtn_4.AutoButtonColor = true
+ui_StartBtn_4.Parent = ui_MainFrame_2
 
 -- إنشاء: UICorner (UICorner)
-local ui_UICorner_6 = Instance.new("UICorner")
-ui_UICorner_6.Name = "UICorner"
-ui_UICorner_6.CornerRadius = UDim.new(0, 4)
-ui_UICorner_6.Parent = ui_StartBtn_5
+local ui_UICorner_5 = Instance.new("UICorner")
+ui_UICorner_5.Name = "UICorner"
+ui_UICorner_5.CornerRadius = UDim.new(0, 4)
+ui_UICorner_5.Parent = ui_StartBtn_4
 
 -- إنشاء: UIStroke (UIStroke)
-local ui_UIStroke_7 = Instance.new("UIStroke")
-ui_UIStroke_7.Name = "UIStroke"
-ui_UIStroke_7.Color = Color3.fromRGB(0, 85, 127)
-ui_UIStroke_7.Thickness = 2
-ui_UIStroke_7.Transparency = 0
-ui_UIStroke_7.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-ui_UIStroke_7.LineJoinMode = Enum.LineJoinMode.Round
-ui_UIStroke_7.Parent = ui_StartBtn_5
+local ui_UIStroke_6 = Instance.new("UIStroke")
+ui_UIStroke_6.Name = "UIStroke"
+ui_UIStroke_6.Color = Color3.fromRGB(0, 85, 127)
+ui_UIStroke_6.Thickness = 2
+ui_UIStroke_6.Transparency = 0
+ui_UIStroke_6.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+ui_UIStroke_6.LineJoinMode = Enum.LineJoinMode.Round
+ui_UIStroke_6.Parent = ui_StartBtn_4
 
 -- إنشاء: Tip (TextLabel)
-local ui_Tip_8 = Instance.new("TextLabel")
-ui_Tip_8.Name = "Tip"
-ui_Tip_8.AnchorPoint = Vector2.new(0, 0)
-ui_Tip_8.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-ui_Tip_8.BackgroundTransparency = 1
-ui_Tip_8.BorderColor3 = Color3.fromRGB(0, 0, 0)
-ui_Tip_8.BorderSizePixel = 0
-ui_Tip_8.Position = UDim2.new(0.0296296, 0, 0.74375, 0)
-ui_Tip_8.Rotation = 0
-ui_Tip_8.Size = UDim2.new(0.940741, 0, 0.25625, 0)
-ui_Tip_8.SizeConstraint = Enum.SizeConstraint.RelativeXY
-ui_Tip_8.Visible = true
-ui_Tip_8.ZIndex = 1
-ui_Tip_8.ClipsDescendants = false
-ui_Tip_8.LayoutOrder = 0
-ui_Tip_8.Text = "Sit in your boat to start finding"
-ui_Tip_8.TextColor3 = Color3.fromRGB(0, 42, 62)
-ui_Tip_8.TextSize = 20
-ui_Tip_8.TextScaled = false
-ui_Tip_8.TextWrapped = true
-ui_Tip_8.TextXAlignment = Enum.TextXAlignment.Center
-ui_Tip_8.TextYAlignment = Enum.TextYAlignment.Center
-ui_Tip_8.RichText = false
-ui_Tip_8.FontFace = Font.new("rbxassetid://12187370000", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
-ui_Tip_8.TextTransparency = 0.30000001192092896
-ui_Tip_8.Parent = ui_MainFrame_2
+local ui_Tip_7 = Instance.new("TextLabel")
+ui_Tip_7.Name = "Tip"
+ui_Tip_7.AnchorPoint = Vector2.new(0, 0)
+ui_Tip_7.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ui_Tip_7.BackgroundTransparency = 1
+ui_Tip_7.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ui_Tip_7.BorderSizePixel = 0
+ui_Tip_7.Position = UDim2.new(0.0296296, 0, 0.74375, 0)
+ui_Tip_7.Rotation = 0
+ui_Tip_7.Size = UDim2.new(0.940741, 0, 0.25625, 0)
+ui_Tip_7.SizeConstraint = Enum.SizeConstraint.RelativeXY
+ui_Tip_7.Visible = true
+ui_Tip_7.ZIndex = 1
+ui_Tip_7.ClipsDescendants = false
+ui_Tip_7.LayoutOrder = 0
+ui_Tip_7.Text = "Sit in your boat to start finding"
+ui_Tip_7.TextColor3 = Color3.fromRGB(0, 42, 62)
+ui_Tip_7.TextSize = 20
+ui_Tip_7.TextScaled = true
+ui_Tip_7.TextWrapped = true
+ui_Tip_7.TextXAlignment = Enum.TextXAlignment.Center
+ui_Tip_7.TextYAlignment = Enum.TextYAlignment.Center
+ui_Tip_7.RichText = false
+ui_Tip_7.FontFace = Font.new("rbxassetid://12187370000", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
+ui_Tip_7.TextTransparency = 0.30000001192092896
+ui_Tip_7.Parent = ui_MainFrame_2
 
 -- إنشاء: CloseBtn (TextButton)
-local ui_CloseBtn_9 = Instance.new("TextButton")
-ui_CloseBtn_9.Name = "CloseBtn"
-ui_CloseBtn_9.AnchorPoint = Vector2.new(0, 0)
-ui_CloseBtn_9.BackgroundColor3 = Color3.fromRGB(0, 51, 74)
-ui_CloseBtn_9.BackgroundTransparency = 0
-ui_CloseBtn_9.BorderColor3 = Color3.fromRGB(0, 0, 0)
-ui_CloseBtn_9.BorderSizePixel = 0
-ui_CloseBtn_9.Position = UDim2.new(0.907407, 0, 0, 0)
-ui_CloseBtn_9.Rotation = 0
-ui_CloseBtn_9.Size = UDim2.new(0.0925926, 0, 0.15625, 0)
-ui_CloseBtn_9.SizeConstraint = Enum.SizeConstraint.RelativeXY
-ui_CloseBtn_9.Visible = true
-ui_CloseBtn_9.ZIndex = 1
-ui_CloseBtn_9.ClipsDescendants = false
-ui_CloseBtn_9.LayoutOrder = 0
-ui_CloseBtn_9.Text = "X"
-ui_CloseBtn_9.TextColor3 = Color3.fromRGB(0, 85, 127)
-ui_CloseBtn_9.TextSize = 14
-ui_CloseBtn_9.TextScaled = true
-ui_CloseBtn_9.TextWrapped = true
-ui_CloseBtn_9.TextXAlignment = Enum.TextXAlignment.Center
-ui_CloseBtn_9.TextYAlignment = Enum.TextYAlignment.Center
-ui_CloseBtn_9.RichText = false
-ui_CloseBtn_9.FontFace = Font.new("rbxassetid://12187370000", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
-ui_CloseBtn_9.TextTransparency = 0
-ui_CloseBtn_9.AutoButtonColor = true
-ui_CloseBtn_9.Parent = ui_MainFrame_2
+local ui_CloseBtn_8 = Instance.new("TextButton")
+ui_CloseBtn_8.Name = "CloseBtn"
+ui_CloseBtn_8.AnchorPoint = Vector2.new(0, 0)
+ui_CloseBtn_8.BackgroundColor3 = Color3.fromRGB(0, 51, 74)
+ui_CloseBtn_8.BackgroundTransparency = 0
+ui_CloseBtn_8.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ui_CloseBtn_8.BorderSizePixel = 0
+ui_CloseBtn_8.Position = UDim2.new(0.907407, 0, 0, 0)
+ui_CloseBtn_8.Rotation = 0
+ui_CloseBtn_8.Size = UDim2.new(0.0925926, 0, 0.15625, 0)
+ui_CloseBtn_8.SizeConstraint = Enum.SizeConstraint.RelativeXY
+ui_CloseBtn_8.Visible = true
+ui_CloseBtn_8.ZIndex = 1
+ui_CloseBtn_8.ClipsDescendants = false
+ui_CloseBtn_8.LayoutOrder = 0
+ui_CloseBtn_8.Text = "X"
+ui_CloseBtn_8.TextColor3 = Color3.fromRGB(0, 85, 127)
+ui_CloseBtn_8.TextSize = 14
+ui_CloseBtn_8.TextScaled = true
+ui_CloseBtn_8.TextWrapped = true
+ui_CloseBtn_8.TextXAlignment = Enum.TextXAlignment.Center
+ui_CloseBtn_8.TextYAlignment = Enum.TextYAlignment.Center
+ui_CloseBtn_8.RichText = false
+ui_CloseBtn_8.FontFace = Font.new("rbxassetid://12187370000", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
+ui_CloseBtn_8.TextTransparency = 0
+ui_CloseBtn_8.AutoButtonColor = true
+ui_CloseBtn_8.Parent = ui_MainFrame_2
 
 -- إنشاء: UICorner (UICorner)
-local ui_UICorner_10 = Instance.new("UICorner")
-ui_UICorner_10.Name = "UICorner"
-ui_UICorner_10.CornerRadius = UDim.new(0, 0)
-ui_UICorner_10.Parent = ui_CloseBtn_9
+local ui_UICorner_9 = Instance.new("UICorner")
+ui_UICorner_9.Name = "UICorner"
+ui_UICorner_9.CornerRadius = UDim.new(0, 0)
+ui_UICorner_9.Parent = ui_CloseBtn_8
 
 --// ==========================================
 --// البرمجات المدمجة التي كانت داخل الواجهة
@@ -201,7 +173,7 @@ ui_UICorner_10.Parent = ui_CloseBtn_9
 
 -- تشغيل برمجة: FindScript
 task.spawn(function()
-	local script = setmetatable({Parent = ui_StartBtn_5, Name = "FindScript"}, {__index = ui_StartBtn_5})
+	local script = setmetatable({Parent = ui_StartBtn_4, Name = "FindScript"}, {__index = ui_StartBtn_4})
 	local Players = game:GetService("Players")
 	local RunService = game:GetService("RunService")
 	local Workspace = game:GetService("Workspace")
@@ -210,11 +182,10 @@ task.spawn(function()
 	local player = Players.LocalPlayer
 	
 	local BOAT_SPEED = 300
-	local LIFT_HEIGHT = 12
-	local CENTER_POSITION = Vector3.new(0, 20, 0) -- عدّل نقطة الوسط حسب خريطتك
+	local LIFT_HEIGHT = 25 -- ارتفاع أعلى لضمان عدم ملامسة سطح البحر نهائياً
+	local CENTER_POSITION = Vector3.new(0, 50, 0) -- عدّل الإحداثيات حسب وسط خريطتك
 	local CUSTOM_TWEEN_DURATION = 1.2
 	
-	-- حفظ الشكل والنص الأصلي للزر
 	local originalColor = button.BackgroundColor3
 	local originalText = button.Text
 	local stopColor = Color3.fromRGB(200, 40, 40)
@@ -222,6 +193,8 @@ task.spawn(function()
 	local isRunning = false
 	local moveConn = nil
 	local tweenConn = nil
+	local antiWaterConn = nil
+	local disabledWaterParts = {}
 	
 	local function setButtonStopMode(activeStop)
 		if activeStop then
@@ -230,6 +203,59 @@ task.spawn(function()
 		else
 			button.BackgroundColor3 = originalColor
 			button.Text = originalText
+		end
+	end
+	
+	-- منع دمج الموية عن طريق تعطيل لمس أجزاء البحر ومنع حالة السباحة
+	local function setWaterProtection(enabled)
+		local character = player.Character
+		local humanoid = character and character:FindFirstChildOfClass("Humanoid")
+	
+		if enabled then
+			if humanoid then
+				humanoid:SetStateEnabled(Enum.HumanoidStateType.Swimming, false)
+			end
+	
+			for _, obj in ipairs(Workspace:GetDescendants()) do
+				if obj:IsA("BasePart") then
+					local lowerName = string.lower(obj.Name)
+					if string.find(lowerName, "water") or string.find(lowerName, "sea") or string.find(lowerName, "ocean") then
+						if obj.CanTouch then
+							obj.CanTouch = false
+							table.insert(disabledWaterParts, obj)
+						end
+					end
+				end
+			end
+	
+			antiWaterConn = RunService.Heartbeat:Connect(function()
+				local char = player.Character
+				local hum = char and char:FindFirstChildOfClass("Humanoid")
+				local root = char and char:FindFirstChild("HumanoidRootPart")
+				if hum and hum:GetState() == Enum.HumanoidStateType.Swimming then
+					hum:ChangeState(Enum.HumanoidStateType.Running)
+				end
+				-- إبقاء اللاعب فوق مستوى سطح البحر (Y > 5) إذا حاولت الجاذبية سحبه
+				if root and root.Position.Y < 8 then
+					root.CFrame = CFrame.new(root.Position.X, 15, root.Position.Z) * (root.CFrame - root.CFrame.Position)
+				end
+			end)
+		else
+			if antiWaterConn then
+				antiWaterConn:Disconnect()
+				antiWaterConn = nil
+			end
+	
+			if humanoid then
+				humanoid:SetStateEnabled(Enum.HumanoidStateType.Swimming, true)
+			end
+	
+			for _, part in ipairs(disabledWaterParts) do
+				if part and part.Parent then
+					part.CanTouch = true
+				end
+			end
+			table.clear(disabledWaterParts)
 		end
 	end
 	
@@ -242,6 +268,8 @@ task.spawn(function()
 			tweenConn:Disconnect()
 			tweenConn = nil
 		end
+	
+		setWaterProtection(false)
 	
 		if boatPrimary and boatPrimary.Parent then
 			boatPrimary.AssemblyLinearVelocity = Vector3.zero
@@ -332,7 +360,6 @@ task.spawn(function()
 		local humanoid = character and character:FindFirstChildOfClass("Humanoid")
 		local rootPart = character and character:FindFirstChild("HumanoidRootPart")
 	
-		-- إذا كان شغال مسبقاً، أوقف كل شيء وأرجع الزر لحالته الأصلية
 		if isRunning then
 			stopAllActivity(nil, rootPart, humanoid)
 			return
@@ -341,49 +368,50 @@ task.spawn(function()
 		local boat, seat
 		boat, seat, humanoid, character = getSeatedBoatAndSeat()
 		if not boat or not seat or not humanoid or not character then
-			warn("اجلس على Seat أو VehicleSeat داخل القارب أولاً")
+			warn("اجلس على المقعد داخل القارب أولاً")
 			return
 		end
 	
 		rootPart = character:FindFirstChild("HumanoidRootPart")
 		if not rootPart then return end
 	
-		local primary = boat.PrimaryPart or seat or boat:FindFirstChildWhichIsA("BasePart")
-		if not primary then return end
+		local primary = boat.PrimaryPart or seat
+		if not boat.PrimaryPart then
+			boat.PrimaryPart = primary
+		end
 	
 		isRunning = true
 		setButtonStopMode(true)
+		setWaterProtection(true)
 	
-		for _, part in ipairs(boat:GetDescendants()) do
-			if part:IsA("BasePart") and part ~= primary then
-				local weld = part:FindFirstChild("BoatSingleWeld") or Instance.new("WeldConstraint")
-				weld.Name = "BoatSingleWeld"
-				weld.Part0 = primary
-				weld.Part1 = part
-				weld.Parent = part
-				part.Anchored = false
-			end
-		end
-		primary.Anchored = false
-	
-		primary.CFrame = primary.CFrame + Vector3.new(0, LIFT_HEIGHT, 0)
+		-- تفعيل Noclip للقارب فقط بدون كسر لحام المقعد
 		setBoatNoclip(boat, true)
-	
 		for _, part in ipairs(character:GetDescendants()) do
 			if part:IsA("BasePart") and part.Name ~= "HumanoidRootPart" then
 				part.CanCollide = true
 			end
 		end
 	
+		-- رفع القارب واللاعب معاً باستخدام PivotTo حتى لا يخرج اللاعب من المقعد
+		local currentPivot = boat:GetPivot()
+		local liftedPivot = currentPivot + Vector3.new(0, LIFT_HEIGHT, 0)
+		local targetY = liftedPivot.Position.Y
+		boat:PivotTo(liftedPivot)
+	
+		-- التأكد من بقاء اللاعب جالساً
+		if humanoid.SeatPart ~= seat then
+			seat:Sit(humanoid)
+		end
+	
 		moveConn = RunService.Heartbeat:Connect(function()
-			if not isRunning then
+			if not isRunning or not boat.Parent or not primary.Parent then
 				stopAllActivity(primary, rootPart, humanoid)
 				return
 			end
 	
-			if not boat.Parent or not primary.Parent then
-				stopAllActivity(primary, rootPart, humanoid)
-				return
+			-- إجبار اللاعب على البقاء جالساً طالما لم يرسبن Mirage
+			if humanoid.SeatPart ~= seat then
+				seat:Sit(humanoid)
 			end
 	
 			if findMirageObject() then
@@ -395,6 +423,7 @@ task.spawn(function()
 				primary.AssemblyLinearVelocity = Vector3.zero
 				primary.AssemblyAngularVelocity = Vector3.zero
 	
+				-- إخراج اللاعب من المقعد الآن بعد وصول Mirage
 				humanoid.Sit = false
 				local seatWeld = seat:FindFirstChild("SeatWeld") or rootPart:FindFirstChild("SeatWeld")
 				if seatWeld then seatWeld:Destroy() end
@@ -405,7 +434,7 @@ task.spawn(function()
 					return
 				end
 	
-				rootPart.AssemblyLinearVelocity = Vector3.new(0, 55, 0) + (primary.CFrame.LookVector * 25)
+				rootPart.AssemblyLinearVelocity = Vector3.new(0, 60, 0) + (primary.CFrame.LookVector * 25)
 				humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
 	
 				task.wait(0.25)
@@ -418,15 +447,31 @@ task.spawn(function()
 				return
 			end
 	
+			-- تحريك القارب للأمام بسرعة 300 مع تثبيت الارتفاع Y ومنع الدوران
 			local look = primary.CFrame.LookVector
-			primary.AssemblyLinearVelocity = Vector3.new(look.X * BOAT_SPEED, 0, look.Z * BOAT_SPEED)
+			local flatLook = Vector3.new(look.X, 0, look.Z)
+			if flatLook.Magnitude > 0.001 then
+				flatLook = flatLook.Unit
+			else
+				flatLook = Vector3.new(0, 0, -1)
+			end
+	
+			primary.AssemblyLinearVelocity = Vector3.new(flatLook.X * BOAT_SPEED, 0, flatLook.Z * BOAT_SPEED)
+			primary.AssemblyAngularVelocity = Vector3.zero
+	
+			-- منع القارب من الهبوط نحو الماء إطلاقاً
+			if math.abs(primary.Position.Y - targetY) > 0.5 then
+				local pos = boat:GetPivot().Position
+				local rot = boat:GetPivot() - pos
+				boat:PivotTo(CFrame.new(pos.X, targetY, pos.Z) * rot)
+			end
 		end)
 	end)
 end)
 
 -- تشغيل برمجة: CloseScript
 task.spawn(function()
-	local script = setmetatable({Parent = ui_CloseBtn_9, Name = "CloseScript"}, {__index = ui_CloseBtn_9})
+	local script = setmetatable({Parent = ui_CloseBtn_8, Name = "CloseScript"}, {__index = ui_CloseBtn_8})
 	local button = script.Parent
 	local targetFrame = button.Parent -- يمكنك تغييرها إلى button.Parent.Parent حسب ترتيب العناصر
 	
