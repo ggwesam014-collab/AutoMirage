@@ -182,8 +182,9 @@ task.spawn(function()
 	local player = Players.LocalPlayer
 	
 	local BOAT_SPEED = 300
-	local LIFT_HEIGHT = 20
-	local CENTER_POSITION = Vector3.new(0, 50, 0) -- عدّل الإحداثيات حسب وسط خريطتك
+	local LIFT_HEIGHT = 25
+	local MIN_SAFE_Y = 12 -- حد أمان أعلى من سطح البحر لمنع دمج الفاكهة
+	local CENTER_POSITION = Vector3.new(0, 60, 0) -- عدّل نقطة الوسط حسب خريطتك
 	local CUSTOM_TWEEN_DURATION = 1.2
 	
 	local originalColor = button.BackgroundColor3
@@ -195,7 +196,6 @@ task.spawn(function()
 	local tweenConn = nil
 	local antiWaterConn = nil
 	local disabledWaterParts = {}
-	local activeBodyVel = nil
 	
 	local function setButtonStopMode(activeStop)
 		if activeStop then
@@ -207,17 +207,7 @@ task.spawn(function()
 		end
 	end
 	
-	local function clearBoatVelocity(boatPrimary)
-		if activeBodyVel then
-			activeBodyVel:Destroy()
-			activeBodyVel = nil
-		end
-		if boatPrimary and boatPrimary.Parent then
-			boatPrimary.AssemblyLinearVelocity = Vector3.zero
-			boatPrimary.AssemblyAngularVelocity = Vector3.zero
-		end
-	end
-	
+	-- حماية من دمج الموية لمستخدمي الفواكه (Terrain + Parts + ارتفاع البحر)
 	local function setWaterProtection(enabled)
 		local character = player.Character
 		local humanoid = character and character:FindFirstChildOfClass("Humanoid")
@@ -229,8 +219,8 @@ task.spawn(function()
 	
 			for _, obj in ipairs(Workspace:GetDescendants()) do
 				if obj:IsA("BasePart") then
-					local lowerName = string.lower(obj.Name)
-					if string.find(lowerName, "water") or string.find(lowerName, "sea") or string.find(lowerName, "ocean") then
+					local n = string.lower(obj.Name)
+					if string.find(n, "water") or string.find(n, "sea") or string.find(n, "ocean") or string.find(n, "damage") then
 						if obj.CanTouch then
 							obj.CanTouch = false
 							table.insert(disabledWaterParts, obj)
@@ -243,11 +233,19 @@ task.spawn(function()
 				local char = player.Character
 				local hum = char and char:FindFirstChildOfClass("Humanoid")
 				local root = char and char:FindFirstChild("HumanoidRootPart")
-				if hum and hum:GetState() == Enum.HumanoidStateType.Swimming then
-					hum:ChangeState(Enum.HumanoidStateType.Running)
+	
+				if hum then
+					if hum:GetState() == Enum.HumanoidStateType.Swimming then
+						hum:ChangeState(Enum.HumanoidStateType.Running)
+					end
+					hum:SetStateEnabled(Enum.HumanoidStateType.Swimming, false)
 				end
-				if root and root.Position.Y < 8 then
-					root.CFrame = CFrame.new(root.Position.X, 15, root.Position.Z) * (root.CFrame - root.CFrame.Position)
+	
+				-- رفع اللاعب فوراً إذا اقترب من مستوى البحر أو نزل تحته
+				if root and root.Position.Y < MIN_SAFE_Y then
+					local rotOnly = root.CFrame - root.CFrame.Position
+					root.AssemblyLinearVelocity = Vector3.new(root.AssemblyLinearVelocity.X, 0, root.AssemblyLinearVelocity.Z)
+					root.CFrame = CFrame.new(root.Position.X, MIN_SAFE_Y + 4, root.Position.Z) * rotOnly
 				end
 			end)
 		else
@@ -279,8 +277,12 @@ task.spawn(function()
 			tweenConn = nil
 		end
 	
-		clearBoatVelocity(boatPrimary)
 		setWaterProtection(false)
+	
+		if boatPrimary and boatPrimary.Parent then
+			boatPrimary.AssemblyLinearVelocity = Vector3.zero
+			boatPrimary.AssemblyAngularVelocity = Vector3.zero
+		end
 	
 		if rootPart and rootPart.Parent then
 			rootPart.Anchored = false
@@ -390,36 +392,34 @@ task.spawn(function()
 		setButtonStopMode(true)
 		setWaterProtection(true)
 	
-		-- تفعيل Noclip للقارب فقط مع إبقاء المقعد واللاعب بدون كسر لحام الجلوس
+		-- تفعيل Noclip للقارب فقط مع بقاء تصادم اللاعب طبيعياً
 		setBoatNoclip(boat, true)
-		seat.CanCollide = true
 		for _, part in ipairs(character:GetDescendants()) do
 			if part:IsA("BasePart") and part.Name ~= "HumanoidRootPart" then
 				part.CanCollide = true
 			end
 		end
 	
-		-- رفع القارب مرة واحدة قبل بدء الدفع
-		boat:PivotTo(boat:GetPivot() + Vector3.new(0, LIFT_HEIGHT, 0))
+		-- رفع القارب واللاعب مرة واحدة للأعلى
+		local startPivot = boat:GetPivot()
+		local liftedPivot = startPivot + Vector3.new(0, LIFT_HEIGHT, 0)
+		local fixedY = math.max(liftedPivot.Position.Y, MIN_SAFE_Y + 8)
+		boat:PivotTo(CFrame.new(liftedPivot.Position.X, fixedY, liftedPivot.Position.Z) * (liftedPivot - liftedPivot.Position))
 	
-		-- استخدام BodyVelocity ثابتة للحفاظ على السرعة 300 والارتفاع بدون تقطيع PivotTo
-		clearBoatVelocity(primary)
-		local bv = Instance.new("BodyVelocity")
-		bv.Name = "MirageBoatVelocity"
-		bv.MaxForce = Vector3.new(1e6, 1e5, 1e6)
-		bv.P = 1250
-		bv.Parent = primary
-		activeBodyVel = bv
-	
-		moveConn = RunService.Heartbeat:Connect(function()
+		moveConn = RunService.Heartbeat:Connect(function(dt)
 			if not isRunning then
 				stopAllActivity(primary, rootPart, humanoid)
 				return
 			end
 	
-			if not boat.Parent or not primary.Parent then
+			if not boat.Parent or not primary.Parent or not rootPart.Parent or not humanoid.Parent then
 				stopAllActivity(primary, rootPart, humanoid)
 				return
+			end
+	
+			-- إبقاء حالة الجلوس فعالة ما لم يظهر Mirage
+			if not humanoid.Sit then
+				humanoid.Sit = true
 			end
 	
 			if findMirageObject() then
@@ -428,7 +428,8 @@ task.spawn(function()
 					moveConn = nil
 				end
 	
-				clearBoatVelocity(primary)
+				primary.AssemblyLinearVelocity = Vector3.zero
+				primary.AssemblyAngularVelocity = Vector3.zero
 	
 				humanoid.Sit = false
 				local seatWeld = seat:FindFirstChild("SeatWeld") or rootPart:FindFirstChild("SeatWeld")
@@ -453,7 +454,9 @@ task.spawn(function()
 				return
 			end
 	
-			local look = primary.CFrame.LookVector
+			-- تحريك القارب واللاعب للأمام بسرعة 300 على ارتفاع ثابت بدون كسر الجلوس
+			local currentPivot = boat:GetPivot()
+			local look = currentPivot.LookVector
 			local flatLook = Vector3.new(look.X, 0, look.Z)
 			if flatLook.Magnitude > 0.001 then
 				flatLook = flatLook.Unit
@@ -461,8 +464,14 @@ task.spawn(function()
 				flatLook = Vector3.new(0, 0, -1)
 			end
 	
-			if activeBodyVel and activeBodyVel.Parent then
-				activeBodyVel.Velocity = Vector3.new(flatLook.X * BOAT_SPEED, 0, flatLook.Z * BOAT_SPEED)
+			local nextPos = currentPivot.Position + (flatLook * BOAT_SPEED * dt)
+			local rotMatrix = currentPivot - currentPivot.Position
+			boat:PivotTo(CFrame.new(nextPos.X, fixedY, nextPos.Z) * rotMatrix)
+	
+			-- إذا انفصل اللاعب عن المقعد فجأة أثناء الحركة، نبقيه متزامناً مع القارب فوق سطح البحر
+			if humanoid.SeatPart ~= seat and rootPart then
+				local seatOffset = seat.CFrame:ToObjectSpace(rootPart.CFrame)
+				rootPart.CFrame = seat.CFrame * seatOffset
 			end
 		end)
 	end)
