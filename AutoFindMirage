@@ -1,0 +1,486 @@
+--// تم توليد هذا السكربت تلقائياً بواسطة محول الواجهات الذكي
+local Players = game:GetService("Players")
+local player = Players.LocalPlayer
+local playerGui = player:WaitForChild("PlayerGui")
+
+-- إنشاء: AutoMirage (ScreenGui)
+local ui_AutoMirage_1 = Instance.new("ScreenGui")
+ui_AutoMirage_1.Name = "AutoMirage"
+ui_AutoMirage_1.Enabled = true
+ui_AutoMirage_1.ResetOnSpawn = true
+ui_AutoMirage_1.IgnoreGuiInset = false
+ui_AutoMirage_1.DisplayOrder = 0
+ui_AutoMirage_1.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+ui_AutoMirage_1.Parent = playerGui
+
+-- إنشاء: MainFrame (Frame)
+local ui_MainFrame_2 = Instance.new("Frame")
+ui_MainFrame_2.Name = "MainFrame"
+ui_MainFrame_2.AnchorPoint = Vector2.new(0, 0)
+ui_MainFrame_2.BackgroundColor3 = Color3.fromRGB(190, 200, 255)
+ui_MainFrame_2.BackgroundTransparency = 0
+ui_MainFrame_2.BorderColor3 = Color3.fromRGB(0, 85, 127)
+ui_MainFrame_2.BorderSizePixel = 2
+ui_MainFrame_2.Position = UDim2.new(0.381162, 0, 0.347909, 0)
+ui_MainFrame_2.Rotation = 0
+ui_MainFrame_2.Size = UDim2.new(0.237676, 0, 0.304182, 0)
+ui_MainFrame_2.SizeConstraint = Enum.SizeConstraint.RelativeXY
+ui_MainFrame_2.Visible = true
+ui_MainFrame_2.ZIndex = 1
+ui_MainFrame_2.ClipsDescendants = false
+ui_MainFrame_2.LayoutOrder = 0
+ui_MainFrame_2.Parent = ui_AutoMirage_1
+
+-- إنشاء: Title (TextLabel)
+local ui_Title_3 = Instance.new("TextLabel")
+ui_Title_3.Name = "Title"
+ui_Title_3.AnchorPoint = Vector2.new(0, 0)
+ui_Title_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ui_Title_3.BackgroundTransparency = 1
+ui_Title_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ui_Title_3.BorderSizePixel = 0
+ui_Title_3.Position = UDim2.new(0, 0, 0, 0)
+ui_Title_3.Rotation = 0
+ui_Title_3.Size = UDim2.new(1, 0, 0.26875, 0)
+ui_Title_3.SizeConstraint = Enum.SizeConstraint.RelativeXY
+ui_Title_3.Visible = true
+ui_Title_3.ZIndex = 1
+ui_Title_3.ClipsDescendants = false
+ui_Title_3.LayoutOrder = 0
+ui_Title_3.Text = "Auto Mirage"
+ui_Title_3.TextColor3 = Color3.fromRGB(0, 85, 127)
+ui_Title_3.TextSize = 25
+ui_Title_3.TextScaled = false
+ui_Title_3.TextWrapped = true
+ui_Title_3.TextXAlignment = Enum.TextXAlignment.Center
+ui_Title_3.TextYAlignment = Enum.TextYAlignment.Center
+ui_Title_3.RichText = false
+ui_Title_3.FontFace = Font.new("rbxassetid://12187370000", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
+ui_Title_3.TextTransparency = 0
+ui_Title_3.Parent = ui_MainFrame_2
+
+-- إنشاء: MirageStuts (TextLabel)
+local ui_MirageStuts_4 = Instance.new("TextLabel")
+ui_MirageStuts_4.Name = "MirageStuts"
+ui_MirageStuts_4.AnchorPoint = Vector2.new(0, 0)
+ui_MirageStuts_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ui_MirageStuts_4.BackgroundTransparency = 1
+ui_MirageStuts_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ui_MirageStuts_4.BorderSizePixel = 0
+ui_MirageStuts_4.Position = UDim2.new(0.0296296, 0, 0.175, 0)
+ui_MirageStuts_4.Rotation = 0
+ui_MirageStuts_4.Size = UDim2.new(0.97037, 0, 0.15625, 0)
+ui_MirageStuts_4.SizeConstraint = Enum.SizeConstraint.RelativeXY
+ui_MirageStuts_4.Visible = true
+ui_MirageStuts_4.ZIndex = 1
+ui_MirageStuts_4.ClipsDescendants = false
+ui_MirageStuts_4.LayoutOrder = 0
+ui_MirageStuts_4.Text = "Mirage Island:"
+ui_MirageStuts_4.TextColor3 = Color3.fromRGB(0, 85, 127)
+ui_MirageStuts_4.TextSize = 18
+ui_MirageStuts_4.TextScaled = false
+ui_MirageStuts_4.TextWrapped = true
+ui_MirageStuts_4.TextXAlignment = Enum.TextXAlignment.Left
+ui_MirageStuts_4.TextYAlignment = Enum.TextYAlignment.Center
+ui_MirageStuts_4.RichText = false
+ui_MirageStuts_4.FontFace = Font.new("rbxassetid://12187370000", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
+ui_MirageStuts_4.TextTransparency = 0
+ui_MirageStuts_4.Parent = ui_MainFrame_2
+
+-- إنشاء: StartBtn (TextButton)
+local ui_StartBtn_5 = Instance.new("TextButton")
+ui_StartBtn_5.Name = "StartBtn"
+ui_StartBtn_5.AnchorPoint = Vector2.new(0, 0)
+ui_StartBtn_5.BackgroundColor3 = Color3.fromRGB(0, 51, 74)
+ui_StartBtn_5.BackgroundTransparency = 0
+ui_StartBtn_5.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ui_StartBtn_5.BorderSizePixel = 0
+ui_StartBtn_5.Position = UDim2.new(0.0296296, 0, 0.3875, 0)
+ui_StartBtn_5.Rotation = 0
+ui_StartBtn_5.Size = UDim2.new(0.940741, 0, 0.3125, 0)
+ui_StartBtn_5.SizeConstraint = Enum.SizeConstraint.RelativeXY
+ui_StartBtn_5.Visible = true
+ui_StartBtn_5.ZIndex = 1
+ui_StartBtn_5.ClipsDescendants = false
+ui_StartBtn_5.LayoutOrder = 0
+ui_StartBtn_5.Text = "Start Find"
+ui_StartBtn_5.TextColor3 = Color3.fromRGB(0, 85, 127)
+ui_StartBtn_5.TextSize = 25
+ui_StartBtn_5.TextScaled = false
+ui_StartBtn_5.TextWrapped = false
+ui_StartBtn_5.TextXAlignment = Enum.TextXAlignment.Center
+ui_StartBtn_5.TextYAlignment = Enum.TextYAlignment.Center
+ui_StartBtn_5.RichText = false
+ui_StartBtn_5.FontFace = Font.new("rbxassetid://12187370000", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
+ui_StartBtn_5.TextTransparency = 0
+ui_StartBtn_5.AutoButtonColor = true
+ui_StartBtn_5.Parent = ui_MainFrame_2
+
+-- إنشاء: UICorner (UICorner)
+local ui_UICorner_6 = Instance.new("UICorner")
+ui_UICorner_6.Name = "UICorner"
+ui_UICorner_6.CornerRadius = UDim.new(0, 4)
+ui_UICorner_6.Parent = ui_StartBtn_5
+
+-- إنشاء: UIStroke (UIStroke)
+local ui_UIStroke_7 = Instance.new("UIStroke")
+ui_UIStroke_7.Name = "UIStroke"
+ui_UIStroke_7.Color = Color3.fromRGB(0, 85, 127)
+ui_UIStroke_7.Thickness = 2
+ui_UIStroke_7.Transparency = 0
+ui_UIStroke_7.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+ui_UIStroke_7.LineJoinMode = Enum.LineJoinMode.Round
+ui_UIStroke_7.Parent = ui_StartBtn_5
+
+-- إنشاء: Tip (TextLabel)
+local ui_Tip_8 = Instance.new("TextLabel")
+ui_Tip_8.Name = "Tip"
+ui_Tip_8.AnchorPoint = Vector2.new(0, 0)
+ui_Tip_8.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ui_Tip_8.BackgroundTransparency = 1
+ui_Tip_8.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ui_Tip_8.BorderSizePixel = 0
+ui_Tip_8.Position = UDim2.new(0.0296296, 0, 0.74375, 0)
+ui_Tip_8.Rotation = 0
+ui_Tip_8.Size = UDim2.new(0.940741, 0, 0.25625, 0)
+ui_Tip_8.SizeConstraint = Enum.SizeConstraint.RelativeXY
+ui_Tip_8.Visible = true
+ui_Tip_8.ZIndex = 1
+ui_Tip_8.ClipsDescendants = false
+ui_Tip_8.LayoutOrder = 0
+ui_Tip_8.Text = "Sit in your boat to start finding"
+ui_Tip_8.TextColor3 = Color3.fromRGB(0, 42, 62)
+ui_Tip_8.TextSize = 20
+ui_Tip_8.TextScaled = false
+ui_Tip_8.TextWrapped = true
+ui_Tip_8.TextXAlignment = Enum.TextXAlignment.Center
+ui_Tip_8.TextYAlignment = Enum.TextYAlignment.Center
+ui_Tip_8.RichText = false
+ui_Tip_8.FontFace = Font.new("rbxassetid://12187370000", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
+ui_Tip_8.TextTransparency = 0.30000001192092896
+ui_Tip_8.Parent = ui_MainFrame_2
+
+-- إنشاء: CloseBtn (TextButton)
+local ui_CloseBtn_9 = Instance.new("TextButton")
+ui_CloseBtn_9.Name = "CloseBtn"
+ui_CloseBtn_9.AnchorPoint = Vector2.new(0, 0)
+ui_CloseBtn_9.BackgroundColor3 = Color3.fromRGB(0, 51, 74)
+ui_CloseBtn_9.BackgroundTransparency = 0
+ui_CloseBtn_9.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ui_CloseBtn_9.BorderSizePixel = 0
+ui_CloseBtn_9.Position = UDim2.new(0.907407, 0, 0, 0)
+ui_CloseBtn_9.Rotation = 0
+ui_CloseBtn_9.Size = UDim2.new(0.0925926, 0, 0.15625, 0)
+ui_CloseBtn_9.SizeConstraint = Enum.SizeConstraint.RelativeXY
+ui_CloseBtn_9.Visible = true
+ui_CloseBtn_9.ZIndex = 1
+ui_CloseBtn_9.ClipsDescendants = false
+ui_CloseBtn_9.LayoutOrder = 0
+ui_CloseBtn_9.Text = "X"
+ui_CloseBtn_9.TextColor3 = Color3.fromRGB(0, 85, 127)
+ui_CloseBtn_9.TextSize = 14
+ui_CloseBtn_9.TextScaled = true
+ui_CloseBtn_9.TextWrapped = true
+ui_CloseBtn_9.TextXAlignment = Enum.TextXAlignment.Center
+ui_CloseBtn_9.TextYAlignment = Enum.TextYAlignment.Center
+ui_CloseBtn_9.RichText = false
+ui_CloseBtn_9.FontFace = Font.new("rbxassetid://12187370000", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
+ui_CloseBtn_9.TextTransparency = 0
+ui_CloseBtn_9.AutoButtonColor = true
+ui_CloseBtn_9.Parent = ui_MainFrame_2
+
+-- إنشاء: UICorner (UICorner)
+local ui_UICorner_10 = Instance.new("UICorner")
+ui_UICorner_10.Name = "UICorner"
+ui_UICorner_10.CornerRadius = UDim.new(0, 0)
+ui_UICorner_10.Parent = ui_CloseBtn_9
+
+--// ==========================================
+--// البرمجات المدمجة التي كانت داخل الواجهة
+--// ==========================================
+
+-- تشغيل برمجة: FindScript
+task.spawn(function()
+	local script = setmetatable({Parent = ui_StartBtn_5, Name = "FindScript"}, {__index = ui_StartBtn_5})
+	local Players = game:GetService("Players")
+	local RunService = game:GetService("RunService")
+	local Workspace = game:GetService("Workspace")
+	
+	local button = script.Parent
+	local player = Players.LocalPlayer
+	
+	local BOAT_SPEED = 300
+	local LIFT_HEIGHT = 12
+	local CENTER_POSITION = Vector3.new(0, 20, 0) -- عدّل نقطة الوسط حسب خريطتك
+	local CUSTOM_TWEEN_DURATION = 1.2
+	
+	-- حفظ الشكل والنص الأصلي للزر
+	local originalColor = button.BackgroundColor3
+	local originalText = button.Text
+	local stopColor = Color3.fromRGB(200, 40, 40)
+	
+	local isRunning = false
+	local moveConn = nil
+	local tweenConn = nil
+	
+	local function setButtonStopMode(activeStop)
+		if activeStop then
+			button.BackgroundColor3 = stopColor
+			button.Text = "Stop"
+		else
+			button.BackgroundColor3 = originalColor
+			button.Text = originalText
+		end
+	end
+	
+	local function stopAllActivity(boatPrimary, rootPart, humanoid)
+		if moveConn then
+			moveConn:Disconnect()
+			moveConn = nil
+		end
+		if tweenConn then
+			tweenConn:Disconnect()
+			tweenConn = nil
+		end
+	
+		if boatPrimary and boatPrimary.Parent then
+			boatPrimary.AssemblyLinearVelocity = Vector3.zero
+			boatPrimary.AssemblyAngularVelocity = Vector3.zero
+		end
+	
+		if rootPart and rootPart.Parent then
+			rootPart.Anchored = false
+			rootPart.AssemblyLinearVelocity = Vector3.zero
+		end
+	
+		if humanoid and humanoid.Parent then
+			humanoid.PlatformStand = false
+		end
+	
+		isRunning = false
+		setButtonStopMode(false)
+	end
+	
+	local function customEaseOutCubic(t)
+		return 1 - ((1 - t) ^ 3)
+	end
+	
+	local function runCustomTweenToCenter(targetCenter, boatPrimary, rootPart, humanoid)
+		if not rootPart or not humanoid then
+			stopAllActivity(boatPrimary, rootPart, humanoid)
+			return
+		end
+	
+		local startPos = rootPart.Position
+		local elapsed = 0
+	
+		rootPart.Anchored = true
+	
+		tweenConn = RunService.Heartbeat:Connect(function(dt)
+			if not isRunning or not rootPart.Parent then
+				stopAllActivity(boatPrimary, rootPart, humanoid)
+				return
+			end
+	
+			elapsed += dt
+			local alpha = math.clamp(elapsed / CUSTOM_TWEEN_DURATION, 0, 1)
+			local easedAlpha = customEaseOutCubic(alpha)
+	
+			local nextPos = startPos:Lerp(targetCenter, easedAlpha)
+			rootPart.CFrame = CFrame.lookAt(nextPos, targetCenter)
+	
+			if alpha >= 1 then
+				stopAllActivity(boatPrimary, rootPart, humanoid)
+			end
+		end)
+	end
+	
+	local function setBoatNoclip(boatModel, enabled)
+		local character = player.Character
+		for _, part in ipairs(boatModel:GetDescendants()) do
+			if part:IsA("BasePart") then
+				local isPlayerPart = character and part:IsDescendantOf(character)
+				if not isPlayerPart then
+					part.CanCollide = not enabled
+				end
+			end
+		end
+	end
+	
+	local function findMirageObject()
+		for _, obj in ipairs(Workspace:GetDescendants()) do
+			if string.find(string.lower(obj.Name), "mirage") then
+				return obj
+			end
+		end
+		return nil
+	end
+	
+	local function getSeatedBoatAndSeat()
+		local character = player.Character
+		local humanoid = character and character:FindFirstChildOfClass("Humanoid")
+		local seat = humanoid and humanoid.SeatPart
+		if seat and (seat:IsA("Seat") or seat:IsA("VehicleSeat")) then
+			local boat = seat:FindFirstAncestorOfClass("Model")
+			return boat, seat, humanoid, character
+		end
+		return nil, nil, nil, nil
+	end
+	
+	button.MouseButton1Click:Connect(function()
+		local character = player.Character
+		local humanoid = character and character:FindFirstChildOfClass("Humanoid")
+		local rootPart = character and character:FindFirstChild("HumanoidRootPart")
+	
+		-- إذا كان شغال مسبقاً، أوقف كل شيء وأرجع الزر لحالته الأصلية
+		if isRunning then
+			stopAllActivity(nil, rootPart, humanoid)
+			return
+		end
+	
+		local boat, seat
+		boat, seat, humanoid, character = getSeatedBoatAndSeat()
+		if not boat or not seat or not humanoid or not character then
+			warn("اجلس على Seat أو VehicleSeat داخل القارب أولاً")
+			return
+		end
+	
+		rootPart = character:FindFirstChild("HumanoidRootPart")
+		if not rootPart then return end
+	
+		local primary = boat.PrimaryPart or seat or boat:FindFirstChildWhichIsA("BasePart")
+		if not primary then return end
+	
+		isRunning = true
+		setButtonStopMode(true)
+	
+		for _, part in ipairs(boat:GetDescendants()) do
+			if part:IsA("BasePart") and part ~= primary then
+				local weld = part:FindFirstChild("BoatSingleWeld") or Instance.new("WeldConstraint")
+				weld.Name = "BoatSingleWeld"
+				weld.Part0 = primary
+				weld.Part1 = part
+				weld.Parent = part
+				part.Anchored = false
+			end
+		end
+		primary.Anchored = false
+	
+		primary.CFrame = primary.CFrame + Vector3.new(0, LIFT_HEIGHT, 0)
+		setBoatNoclip(boat, true)
+	
+		for _, part in ipairs(character:GetDescendants()) do
+			if part:IsA("BasePart") and part.Name ~= "HumanoidRootPart" then
+				part.CanCollide = true
+			end
+		end
+	
+		moveConn = RunService.Heartbeat:Connect(function()
+			if not isRunning then
+				stopAllActivity(primary, rootPart, humanoid)
+				return
+			end
+	
+			if not boat.Parent or not primary.Parent then
+				stopAllActivity(primary, rootPart, humanoid)
+				return
+			end
+	
+			if findMirageObject() then
+				if moveConn then
+					moveConn:Disconnect()
+					moveConn = nil
+				end
+	
+				primary.AssemblyLinearVelocity = Vector3.zero
+				primary.AssemblyAngularVelocity = Vector3.zero
+	
+				humanoid.Sit = false
+				local seatWeld = seat:FindFirstChild("SeatWeld") or rootPart:FindFirstChild("SeatWeld")
+				if seatWeld then seatWeld:Destroy() end
+	
+				task.wait(0.05)
+				if not isRunning then
+					stopAllActivity(primary, rootPart, humanoid)
+					return
+				end
+	
+				rootPart.AssemblyLinearVelocity = Vector3.new(0, 55, 0) + (primary.CFrame.LookVector * 25)
+				humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+	
+				task.wait(0.25)
+				if not isRunning then
+					stopAllActivity(primary, rootPart, humanoid)
+					return
+				end
+	
+				runCustomTweenToCenter(CENTER_POSITION, primary, rootPart, humanoid)
+				return
+			end
+	
+			local look = primary.CFrame.LookVector
+			primary.AssemblyLinearVelocity = Vector3.new(look.X * BOAT_SPEED, 0, look.Z * BOAT_SPEED)
+		end)
+	end)
+end)
+
+-- تشغيل برمجة: CloseScript
+task.spawn(function()
+	local script = setmetatable({Parent = ui_CloseBtn_9, Name = "CloseScript"}, {__index = ui_CloseBtn_9})
+	local button = script.Parent
+	local targetFrame = button.Parent -- يمكنك تغييرها إلى button.Parent.Parent حسب ترتيب العناصر
+	
+	button.MouseButton1Click:Connect(function()
+		if targetFrame then
+			targetFrame:Destroy()
+		end
+	end)
+end)
+
+-- تشغيل برمجة: DragScript
+task.spawn(function()
+	local script = setmetatable({Parent = ui_MainFrame_2, Name = "DragScript"}, {__index = ui_MainFrame_2})
+	local UserInputService = game:GetService("UserInputService")
+	
+	local frame = script.Parent
+	local dragging = false
+	local dragInput
+	local dragStart
+	local startPos
+	
+	local function update(input)
+		local delta = input.Position - dragStart
+		frame.Position = UDim2.new(
+			startPos.X.Scale,
+			startPos.X.Offset + delta.X,
+			startPos.Y.Scale,
+			startPos.Y.Offset + delta.Y
+		)
+	end
+	
+	frame.InputBegan:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+			dragging = true
+			dragStart = input.Position
+			startPos = frame.Position
+	
+			input.Changed:Connect(function()
+				if input.UserInputState == Enum.UserInputState.End then
+					dragging = false
+				end
+			end)
+		end
+	end)
+	
+	frame.InputChanged:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+			dragInput = input
+		end
+	end)
+	
+	UserInputService.InputChanged:Connect(function(input)
+		if input == dragInput and dragging then
+			update(input)
+		end
+	end)
+end)
